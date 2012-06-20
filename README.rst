@@ -11,7 +11,7 @@ I've organized the modules by adding them to groups:
 * qt5: this group contains all of the packages
 
 * qt5-essentials: this group contains packages for all modules qt considers
-  `essential <http://qt-project.org/wiki/Qt-Essentials-Modules>`_.
+  `essentials <http://qt-project.org/wiki/Qt-Essentials-Modules>`_.
 
 * qt5-addons: this group contains packages for all modules qt considers
   `addons <http://qt-project.org/wiki/Qt-Add-ons-Modules>`_.
