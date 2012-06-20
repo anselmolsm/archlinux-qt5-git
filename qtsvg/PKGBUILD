@@ -4,6 +4,7 @@ pkgname=qt5-qtsvg-git
 pkgver=20120524
 pkgrel=2
 pkgdesc="Qt 5: qtsvg module"
+groups=('qt5')
 arch=('i686' 'x86_64')
 url="https://qt.gitorious.org/qt/qtsvg"
 license=('LGPL')

@@ -4,6 +4,7 @@ pkgname=qt5-qtjsbackend-git
 pkgver=20120524
 pkgrel=3
 pkgdesc="Qt 5: qtjsbackend module (includes QtV8)"
+groups=('qt5' 'qt5-minimal')
 arch=('i686' 'x86_64')
 url="https://qt.gitorious.org/qt/qtjsbackend"
 license=('LGPL')

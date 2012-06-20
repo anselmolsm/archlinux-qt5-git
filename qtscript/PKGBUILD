@@ -1,20 +1,20 @@
 # Maintainer: Anselmo L. S. Melo <anselmolsm@gmail.com>
 
-pkgname=qt5-qtxmlpatterns-git
+pkgname=qt5-qtscript-git
 pkgver=20120524
-pkgrel=1
-pkgdesc="Qt 5: qtxmlpatterns module"
-groups=('qt5' 'qt5-minimal')
+pkgrel=5
+pkgdesc="Qt 5: qtscript module"
+groups=('qt5')
 arch=('i686' 'x86_64')
-url="https://qt.gitorious.org/qt/qtxmlpatterns"
+url="https://qt.gitorious.org/qt/qtdeclarative"
 license=('LGPL')
-depends=()
-makedepends=('gcc' 'git' 'qt5-qtbase-git')
+depends=('qt5-qtbase-git')
+makedepends=('gcc' 'git')
 source=()
 md5sums=()
 
-_gitroot="git://gitorious.org/qt/qtxmlpatterns.git"
-_gitname=qt5-qtxmlpatterns
+_gitroot="git://gitorious.org/qt/qtscript.git"
+_gitname=qt5-qtscript
 
 build() {
 	cd "${srcdir}"
@@ -30,12 +30,12 @@ build() {
 	cd "${srcdir}"
 	cp -rf "${_gitname}" "${_gitname}-build"
 	cd "${_gitname}-build"
+    
     /opt/qt5/bin/qmake
     make
 }
 
 package() {
 	cd "${srcdir}/${_gitname}-build"
-
 	make INSTALL_ROOT="${pkgdir}" install
 }
