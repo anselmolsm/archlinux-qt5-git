@@ -1,6 +1,6 @@
 # Maintainer: Anselmo L. S. Melo <anselmolsm@gmail.com>
 
-pkgname=qt5-qtdeclarative-git
+pkgname=qtdeclarative-git
 pkgver=20120620
 pkgrel=1
 pkgdesc="Qt 5: qtdeclarative module (QtQuick 2, QML)"
@@ -8,14 +8,14 @@ groups=('qt5' 'qt5-essentials')
 arch=('i686' 'x86_64')
 url="https://qt.gitorious.org/qt/qtdeclarative"
 license=('LGPL')
-depends=('qt5-qtbase-git' 'qt5-qtjsbackend-git')
+depends=('qtbase-git' 'qtjsbackend-git')
 makedepends=('git')
 options=('!libtool')
 source=()
 md5sums=()
 
 _gitroot="git://gitorious.org/qt/qtdeclarative.git"
-_gitname=qt5-qtdeclarative
+_gitname=qtdeclarative
 
 build() {
 	cd "${srcdir}"

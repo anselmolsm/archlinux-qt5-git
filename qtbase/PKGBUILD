@@ -1,6 +1,6 @@
 # Maintainer: Anselmo L. S. Melo <anselmolsm@gmail.com>
 
-pkgname=qt5-qtbase-git
+pkgname=qt-base-git
 pkgver=20120620
 pkgrel=1
 pkgdesc="Qt 5: qtbase module"
@@ -15,7 +15,7 @@ source=()
 md5sums=()
 
 _gitroot="git://gitorious.org/qt/qtbase.git"
-_gitname=qt5-qtbase
+_gitname=qtbase
 
 build() {
 	. ../qt.profile

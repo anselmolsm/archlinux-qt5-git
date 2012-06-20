@@ -1,8 +1,8 @@
 # Maintainer: Anselmo L. S. Melo <anselmolsm@gmail.com>
 
 pkgname=qt5-qtsvg-git
-pkgver=20120524
-pkgrel=2
+pkgver=20120620
+pkgrel=1
 pkgdesc="Qt 5: qtsvg module"
 groups=('qt5')
 arch=('i686' 'x86_64')
