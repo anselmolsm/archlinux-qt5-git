@@ -1,15 +1,16 @@
 # Maintainer: Anselmo L. S. Melo <anselmolsm@gmail.com>
 
 pkgname=qt5-qtjsbackend-git
-pkgver=20120524
-pkgrel=3
+pkgver=20120620
+pkgrel=1
 pkgdesc="Qt 5: qtjsbackend module (includes QtV8)"
 groups=('qt5' 'qt5-essentials')
 arch=('i686' 'x86_64')
 url="https://qt.gitorious.org/qt/qtjsbackend"
 license=('LGPL')
-depends=()
-makedepends=('gcc' 'git' 'qt5-qtbase-git')
+depends=('qt5-qtbase-git')
+makedepends=('git')
+options=('!libtool')
 source=()
 md5sums=()
 
@@ -30,7 +31,9 @@ build() {
 	cd "${srcdir}"
 	cp -rf "${_gitname}" "${_gitname}-build"
 	cd "${_gitname}-build"
-    /opt/qt5/bin/qmake
+
+	. /etc/profile/qt5.sh
+	qmake
     make
 }
 

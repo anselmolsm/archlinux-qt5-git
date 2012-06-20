@@ -9,7 +9,8 @@ arch=('i686' 'x86_64')
 url="https://qt.gitorious.org/qt/qtsvg"
 license=('LGPL')
 depends=('qt5-qtbase-git')
-makedepends=('gcc' 'git')
+makedepends=('git')
+options=('!libtool')
 source=()
 md5sums=()
 
@@ -30,8 +31,9 @@ build() {
 	cd "${srcdir}"
 	cp -rf "${_gitname}" "${_gitname}-build"
 	cd "${_gitname}-build"
-    /opt/qt5/bin/qmake
-    make
+
+	. /etc/profile.d/qt5.sh
+	qmake
 }
 
 package() {
