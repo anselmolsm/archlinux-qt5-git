@@ -1,21 +1,24 @@
 # Maintainer: Anselmo L. S. Melo <anselmolsm@gmail.com>
 
-pkgname=qt5-qtbase-git
-pkgver=20120524
-pkgrel=3
+pkgname=qt-base-git
+pkgver=20120620
+pkgrel=1
 pkgdesc="Qt 5: qtbase module"
+groups=('qt5' 'qt5-essentials')
 arch=('i686' 'x86_64')
 url="https://qt.gitorious.org/qt/qtbase"
 license=('LGPL')
-depends=()
-makedepends=('gcc' 'git')
+depends=('xcb-util-image' 'xcb-util-wm')
+makedepends=('git')
+options=('!libtool')
 source=()
 md5sums=()
 
 _gitroot="git://gitorious.org/qt/qtbase.git"
-_gitname=qt5-qtbase
+_gitname=qtbase
 
 build() {
+	. ../qt.profile
 	cd "${srcdir}"
 
 	if [ ! -d "${srcdir}/${_gitname}" ]; then
@@ -34,6 +37,8 @@ build() {
 }
 
 package() {
+	install -Dm755 "../qt.profile" "${pkgdir}"/etc/profile.d/qt5.sh
+
 	cd "${srcdir}/${_gitname}-build"
 
 	make INSTALL_ROOT="${pkgdir}" install
