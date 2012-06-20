@@ -1,10 +1,10 @@
 # Maintainer: Anselmo L. S. Melo <anselmolsm@gmail.com>
 
-pkgname=qt5-qtsvg-git
+pkgname=qtsvg-git
 pkgver=20120620
 pkgrel=1
 pkgdesc="Qt 5: qtsvg module"
-groups=('qt5')
+groups=('qt5' 'qt5-addons')
 arch=('i686' 'x86_64')
 url="https://qt.gitorious.org/qt/qtsvg"
 license=('LGPL')
